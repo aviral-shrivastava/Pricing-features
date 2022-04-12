@@ -1,0 +1,240 @@
+body {
+    background-color: var(--first);
+}
+
+:root{
+    --second:rgb(0,136,169);
+    --third:rgb(1,111,249);
+    --fourth:rgb(0,136,169,0.3);
+    --fifth:rgb(0,136,169,0.5);
+    --sixth:rgb(0,136,169,0.5);
+}
+
+.dark-theme{
+    --first:rgb(0,0,0);
+    --second:rgb(136,136,136);
+    --third:rgb(255,255,255);
+    --fourth:rgb(136,136,136,0.5);
+    --fifth:rgb(128,128,128,0.3);
+    --sixth:rgb(128,128,128,0.5);
+}
+
+.nav-links,
+a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 9px 25px;
+    background-color: var(--second);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#icon{
+    position: relative;
+    left: 98%;  
+}
+
+.logo {
+    width: 70px;
+    height: 0%;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 1%;
+    background-color: var(--fifth);
+}
+
+.nav-links {
+    background-color: var(--second);
+    transition: all 0.3s ease 0s;
+    border-radius: 50px;
+    list-style: none;
+    display: inline-block;
+    padding: 4px 25px;
+}
+
+.nav-links:hover {
+    background-color: var(--sixth);
+}
+
+
+button:hover {
+    background-color: var(--sixth);
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu,
+    .cta {
+        position: fixed;
+        display: flex;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--fourth);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .logo {
+        width: 15%;
+        display: inline-block;
+    }
+
+    #icon{
+        left: 90%;
+    }
+    
+}
+
+#btnScrollToTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+}
+
+.material-icons{
+    padding-right: 50px !important;
+}
+
+
+.main_panel {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 25px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid rgb(203, 210, 226);
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 50px 0 25px;
+    color: var(--third);
+}
+
+.pricing-header {
+    color: rgb(136, 136, 136);
+    font-weight: 600;
+}
+
+.pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 15px 0;
+    border-top: 1px solid rgb(225, 241, 255);
+}
+
+
+.pricing-price {
+    color: var(--third);
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+@media(min-width:768px) {
+    .main_panel {
+        flex-direction: row;
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid rgb(136,136,136,0.3);
+    }
+
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
+    right: 0;
+}
+
+footer{
+    background-color: var(--fifth);
+    font-family: 'Bebas Neue', cursive;
+    padding: 10px;
+    text-align: center;
+}
